@@ -37,3 +37,57 @@ td, th {
 .purple {
     background-color: #FFC2FF;
 }
+
+
+/* second page */
+
+.wrapper {
+    padding: 50px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.align-center {
+    justify-content: center;
+}
+
+.card {
+    padding: 15px 10px;
+    border: 2px dashed gray;
+    width: 20%;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.card header {
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.card header .head {
+    margin-bottom: 10px;
+}
+
+.card header .head .icon {
+    padding: 10px 20px;
+    border: 1px solid gray;
+    margin-right: 10px;
+}

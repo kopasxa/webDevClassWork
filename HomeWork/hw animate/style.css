@@ -1,3 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 .circle {
     position: relative;
     width: 100px;
@@ -57,46 +71,54 @@
 }
 
 
-.door {
-    width: 100%;
-    margin-left: 25%;
+
+
+
+.wrap {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    perspective: 1000px;
 }
 
-
-.door .left, .right {
-    width: 200px;
-    height: 300px;
-    background-color: black;
-    border: 4px solid gray;
-    transition: all .5s linear;
-}
-
-.left {
-    transform-origin: 0% 0%;
-    transform: rotateY(0deg);
-}
-
-.right {
-    transform-origin: 100% 100%;
-}
-
-.door :hover {
-    transform: perspective(1200px) rotateY(-45deg);
-}
-
-.door .text {
+h1 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(50%, 100%);
+    z-index: -1;
 }
+
+.door {
+    width: 300px;
+    height: 300px;
+    background-color: #872D62;
+    border: 4px solid #651142;
+    transition: all 1s;
+}
+
+.door_left {
+    transform-origin: left;
+}
+
+.door_right {
+    transform-origin: right;
+}
+
+.wrap:hover .door_left {
+    transform: rotateY(50deg);
+}
+
+.wrap:hover .door_right {
+    transform: rotateY(-50deg);
+}
+
 
 
 .mainBlock {
     display: flex;
-    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%
 }
 
 .block {
@@ -118,11 +140,15 @@
 .text-block {
     width: 50%;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-block {
     width: 50%;
     height: 300px;
+    overflow: hidden;
 }
 
 img {
